@@ -1,0 +1,14 @@
+duckdb
+pandas
+pyarrow
+scikit-learn
+lightgbm
+shap
+matplotlib
+seaborn
+jupyterlab
+ipykernel
+pytest
+python-dotenv
+kaggle
+joblib

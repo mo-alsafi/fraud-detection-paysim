@@ -1,0 +1,40 @@
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Raw data: keep only the placeholder
+data/raw/*
+!data/raw/.gitkeep
+
+# Processed data: keep only the placeholder
+data/processed/*
+!data/processed/.gitkeep
+
+# Saved models: keep only the placeholder
+models/*
+!models/.gitkeep
+
+# Jupyter temporary files
+.ipynb_checkpoints/
+
+# Test and tool caches
+.pytest_cache/
+.coverage
+htmlcov/
+.ruff_cache/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
