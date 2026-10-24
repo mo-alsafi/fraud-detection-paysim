@@ -1,0 +1,43 @@
+{
+  "project": "fraud-detection-paysim",
+  "dataset": {
+    "name": "Synthetic Financial Datasets For Fraud Detection",
+    "slug": "ealaxi/paysim1",
+    "version": "2",
+    "source_url": "https://www.kaggle.com/datasets/ealaxi/paysim1",
+    "synthetic": true
+  },
+  "retrieval": {
+    "method": "kaggle_cli",
+    "retrieved_at_utc": "2026-10-24T17:38:45Z",
+    "manifest_created_at_utc": "2026-10-24T17:55:01.718738Z"
+  },
+  "file": {
+    "relative_path": "data/raw/PS_20174392719_1491204439457_log.csv",
+    "filename": "PS_20174392719_1491204439457_log.csv",
+    "size_bytes": 493534783,
+    "sha256": "16910f90577b0d981bf8ff289714510bb89bc71bff7d3f220f024e287e4eea6b",
+    "row_count_excluding_header": 6362620,
+    "column_count": 11,
+    "columns": [
+      "step",
+      "type",
+      "amount",
+      "nameOrig",
+      "oldbalanceOrg",
+      "newbalanceOrig",
+      "nameDest",
+      "oldbalanceDest",
+      "newbalanceDest",
+      "isFraud",
+      "isFlaggedFraud"
+    ],
+    "records_with_wrong_field_count": 0
+  },
+  "reference_checks": {
+    "expected_row_count": 6362620,
+    "row_count_matches_expected": true,
+    "expected_columns_match": true,
+    "all_records_have_expected_field_count": true
+  }
+}
