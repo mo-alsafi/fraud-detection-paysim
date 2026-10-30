@@ -1,0 +1,117 @@
+{
+  "model": "models\\lightgbm_a0_tuned_best.joblib",
+  "validation_steps": [
+    446,
+    594
+  ],
+  "training_label_cutoff_step": 421,
+  "alerts_per_24_steps": 500,
+  "model_policy": "fraud score * amount",
+  "rule_policy": "TRANSFER/CASH_OUT ranked by amount",
+  "total_fraud_cases": 1552,
+  "total_fraud_value": 2032680845.1799998,
+  "group_summary": [
+    {
+      "group": "Both selected",
+      "transactions": 1886,
+      "fraud_cases": 369,
+      "legitimate_transactions": 1517,
+      "fraud_value": 1515617131.87,
+      "average_amount": 3283105.8102492047,
+      "total_transaction_value": 6191937558.13,
+      "average_fraud_score": 0.13708540681281983,
+      "fraud_value_share_pct": 74.56247425482024
+    },
+    {
+      "group": "Model only",
+      "transactions": 1218,
+      "fraud_cases": 387,
+      "legitimate_transactions": 831,
+      "fraud_value": 253354921.39999998,
+      "average_amount": 574817.7480870279,
+      "total_transaction_value": 700128017.17,
+      "average_fraud_score": 0.3396367232613218,
+      "fraud_value_share_pct": 12.464077772010718
+    },
+    {
+      "group": "Neither selected",
+      "transactions": 223781,
+      "fraud_cases": 768,
+      "legitimate_transactions": 223013,
+      "fraud_value": 211582030.78,
+      "average_amount": 133981.57312180212,
+      "total_transaction_value": 29982530414.77,
+      "average_fraud_score": 0.0012820933096314982,
+      "fraud_value_share_pct": 10.409013853882398
+    },
+    {
+      "group": "Rule only",
+      "transactions": 1218,
+      "fraud_cases": 28,
+      "legitimate_transactions": 1190,
+      "fraud_value": 52126761.13,
+      "average_amount": 1822974.113407225,
+      "total_transaction_value": 2220382470.13,
+      "average_fraud_score": 0.006415012144253077,
+      "fraud_value_share_pct": 2.564434119286642
+    }
+  ],
+  "fraud_group_summary": [
+    {
+      "group": "Both selected",
+      "fraud_cases": 369,
+      "fraud_value": 1515617131.87,
+      "average_amount": 4107363.50100271
+    },
+    {
+      "group": "Model only",
+      "fraud_cases": 387,
+      "fraud_value": 253354921.4,
+      "average_amount": 654663.8795865633
+    },
+    {
+      "group": "Neither selected",
+      "fraud_cases": 768,
+      "fraud_value": 211582030.78,
+      "average_amount": 275497.43591145833
+    },
+    {
+      "group": "Rule only",
+      "fraud_cases": 28,
+      "fraud_value": 52126761.13,
+      "average_amount": 1861670.040357143
+    }
+  ],
+  "policy_metrics": [
+    {
+      "policy": "TRANSFER/CASH_OUT by amount",
+      "capacity": 3104,
+      "alerts": 3104,
+      "true_positives": 397,
+      "false_positives": 2707,
+      "false_negatives": 1155,
+      "precision_pct": 12.789948453608247,
+      "recall_pct": 25.579896907216494,
+      "fraud_value_caught": 1567743893.0,
+      "dollar_weighted_recall_pct": 77.12690837410689
+    },
+    {
+      "policy": "A0 score x amount",
+      "capacity": 3104,
+      "alerts": 3104,
+      "true_positives": 756,
+      "false_positives": 2348,
+      "false_negatives": 796,
+      "precision_pct": 24.355670103092784,
+      "recall_pct": 48.71134020618557,
+      "fraud_value_caught": 1768972053.27,
+      "dollar_weighted_recall_pct": 87.02655202683097
+    }
+  ],
+  "notes": [
+    "Validation only; the locked test remains closed.",
+    "Groups are mutually exclusive by policy selection.",
+    "A fraud case selected by both policies is not counted as unique value from either alone.",
+    "The group analysis is descriptive, not a new policy-selection experiment."
+  ]
+}

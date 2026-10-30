@@ -1,0 +1,7 @@
+budget_per_day,unrestricted_policy,restricted_policy,unrestricted_alerts,restricted_alerts,selected_alert_jaccard_pct,selected_sets_identical
+100,A0: fraud score,"A0: fraud score, TRANSFER/CASH_OUT only",620,620,100.0,True
+100,A0: fraud score x amount,"A0: fraud score x amount, TRANSFER/CASH_OUT only",620,620,100.0,True
+500,A0: fraud score,"A0: fraud score, TRANSFER/CASH_OUT only",3104,3104,100.0,True
+500,A0: fraud score x amount,"A0: fraud score x amount, TRANSFER/CASH_OUT only",3104,3104,100.0,True
+1000,A0: fraud score,"A0: fraud score, TRANSFER/CASH_OUT only",6208,6208,100.0,True
+1000,A0: fraud score x amount,"A0: fraud score x amount, TRANSFER/CASH_OUT only",6208,6208,100.0,True

@@ -1,0 +1,14 @@
+{
+  "status": "completed_once",
+  "scored_at_utc": "2026-10-29T20:48:55.826891+00:00",
+  "test_steps": [
+    595,
+    743
+  ],
+  "model": "models\\lightgbm_a0_final_test_model.joblib",
+  "report": "reports\\a0_final_test_evaluation.json",
+  "metrics_csv": "reports\\a0_final_test_evaluation.csv",
+  "policy": "A0 fraud score x amount",
+  "budget_per_24_steps": 500,
+  "note": "Do not rerun or tune based on the locked test."
+}

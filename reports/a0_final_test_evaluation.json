@@ -1,0 +1,115 @@
+{
+  "scored_at_utc": "2026-10-29T20:48:55.826891+00:00",
+  "status": "completed_once",
+  "model_path": "models\\lightgbm_a0_final_test_model.joblib",
+  "input_features": "data\\processed\\paysim_a0_features.parquet",
+  "feature_set": "A0 only",
+  "model_parameters": {
+    "objective": "binary",
+    "n_estimators": 200,
+    "learning_rate": 0.05,
+    "num_leaves": 31,
+    "max_depth": -1,
+    "min_child_samples": 100,
+    "max_bin": 127,
+    "colsample_bytree": 0.6,
+    "subsample": 0.8,
+    "subsample_freq": 1,
+    "reg_lambda": 1.0,
+    "scale_pos_weight": 1.0,
+    "random_state": 42,
+    "n_jobs": -1,
+    "verbosity": -1,
+    "importance_type": "gain"
+  },
+  "training_label_cutoff_step": 570,
+  "purged_steps": [
+    571,
+    594
+  ],
+  "test_steps": [
+    595,
+    743
+  ],
+  "test_rows": 123580,
+  "alerts_per_24_steps": 500,
+  "manual_review_cost_per_alert_proxy": 100.0,
+  "policy_frozen_before_test": {
+    "model_policy": "A0 fraud score x amount",
+    "rule_comparator": "TRANSFER/CASH_OUT by amount",
+    "budget_per_24_steps": 500,
+    "success_hurdle": "At least 5% more fraud value than rule"
+  },
+  "best_rule_fraud_value_caught": 2509971879.56,
+  "model_fraud_value_caught": 2579161845.99,
+  "value_difference_vs_rule": 69189966.42999983,
+  "value_uplift_vs_rule_pct": 2.7566032509547034,
+  "required_value_for_5pct_uplift": 2635470473.538,
+  "meets_5pct_value_hurdle": false,
+  "net_benefit_proxy_difference": 69189966.42999983,
+  "confidence_interval": {
+    "method": "paired simulation-day block bootstrap",
+    "replicates": 5000,
+    "seed": 20261029,
+    "complete_day_blocks_resampled": 5,
+    "partial_day_blocks_held_fixed": 2,
+    "uplift_vs_rule_pct_95pct_ci": [
+      1.1757037032056994,
+      4.864013736144046
+    ],
+    "difference_in_value_caught_95pct_ci": [
+      27319365.910000324,
+      126457447.57000017
+    ],
+    "difference_in_dollar_weighted_recall_percentage_points_95pct_ci": [
+      1.0939586119915057,
+      4.357105570370436
+    ],
+    "interpretation_note": "Only five complete simulation-day groups are available. Intervals are exploratory, have low effective sample size, and do not include uncertainty from refitting the model."
+  },
+  "results": [
+    {
+      "policy": "TRANSFER/CASH_OUT by amount",
+      "available_alert_capacity": 3104,
+      "alerts_used": 2897,
+      "true_positives": 818,
+      "false_positives": 2079,
+      "false_negatives": 836,
+      "precision_pct": 28.23610631687953,
+      "recall_pct": 49.4558645707376,
+      "false_positive_rate_pct": 1.705132621426111,
+      "fraud_value_caught": 2509971879.56,
+      "total_fraud_value": 2722434569.3599997,
+      "dollar_weighted_recall_pct": 92.19585689253329,
+      "manual_review_cost_proxy": 289700.0,
+      "net_benefit_proxy": 2509682179.56
+    },
+    {
+      "policy": "A0 fraud score x amount",
+      "available_alert_capacity": 3104,
+      "alerts_used": 2897,
+      "true_positives": 1043,
+      "false_positives": 1854,
+      "false_negatives": 611,
+      "precision_pct": 36.00276147739041,
+      "recall_pct": 63.059250302297464,
+      "false_positive_rate_pct": 1.5205944589341076,
+      "fraud_value_caught": 2579161845.99,
+      "total_fraud_value": 2722434569.3599997,
+      "dollar_weighted_recall_pct": 94.7373308808784,
+      "manual_review_cost_proxy": 289700.0,
+      "net_benefit_proxy": 2578872145.99,
+      "value_uplift_vs_rule_pct": 2.7566032509547034,
+      "required_value_for_5pct_uplift": 2635470473.538,
+      "meets_5pct_value_hurdle": false
+    }
+  ],
+  "limitations": [
+    "PaySim is synthetic; transaction amount is not verified loss avoided.",
+    "Fraud score multiplied by amount is a ranking heuristic, not calibrated expected loss.",
+    "The net-benefit proxy deducts only manual review costs.",
+    "Five complete daily blocks make the bootstrap interval exploratory.",
+    "Earlier full-dataset exploratory summaries included test-period aggregates.",
+    "Do not choose another policy based on these test results."
+  ]
+}

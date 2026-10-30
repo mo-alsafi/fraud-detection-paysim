@@ -1,0 +1,52 @@
+{
+  "evaluated_at_utc": "2026-10-28T01:49:59.841867Z",
+  "model": "SGDClassifier with logistic loss",
+  "purpose": "A0 class-weighted logistic-regression baseline",
+  "feature_set": "A0",
+  "training": {
+    "start_step": 1,
+    "end_step": 445,
+    "rows": 6010937,
+    "fraud_cases": 5007,
+    "legitimate_cases": 6005930,
+    "class_weights": {
+      "0": 0.5004168380250852,
+      "1": 600.2533453165569
+    },
+    "epochs": 3,
+    "random_seed": 42
+  },
+  "validation": {
+    "start_step": 446,
+    "end_step": 594,
+    "rows": 228103,
+    "fraud_cases": 1552,
+    "legitimate_cases": 226551,
+    "average_precision": 0.1260561574908133,
+    "alert_budget_per_full_24_steps": 3104,
+    "alert_count": 3104,
+    "true_positives": 618,
+    "false_positives": 2486,
+    "false_negatives": 934,
+    "precision_pct": 19.90979381443299,
+    "recall_pct": 39.81958762886598,
+    "false_positive_rate_pct": 1.0973246642036452,
+    "fraudulent_transaction_value_caught": 1044107715.23,
+    "total_fraudulent_transaction_value": 2032680845.1799998,
+    "dollar_weighted_recall_pct": 51.36604291351706
+  },
+  "preprocessing": {
+    "numeric_scaler_fit_on": "training only",
+    "categorical_encoding": "one-hot hour and transaction type",
+    "missing_ratio_policy": "fill with zero after creating a separate missingness indicator",
+    "skew_handling": "log1p on non-negative activity features and historical ratio"
+  },
+  "versions": {
+    "scikit_learn": "1.9.1",
+    "duckdb": "2.0.0",
+    "pandas": "3.1.0",
+    "numpy": "2.5.4"
+  },
+  "model_path": "models/logistic_a0_sgd.joblib",
+  "note": "Validation-only model evaluation. The test block was not used for fitting or scoring by this script. Historical exploratory analysis has already exposed test-period aggregate statistics."
+}

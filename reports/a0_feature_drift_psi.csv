@@ -1,0 +1,12 @@
+feature,feature_type,train_missing_pct,validation_missing_pct,missing_rate_change_percentage_points,psi,psi_guideline
+destination_txn_count_prev_24_steps,numeric,0.0,0.0,0.0,2.0925276099788666,high
+destination_amount_sum_prev_24_steps,numeric,0.0,0.0,0.0,1.0435912853967666,high
+hour_of_day,categorical,0.0,0.0,0.0,0.33775247620665777,high
+type,categorical,0.0,0.0,0.0,0.005294138675090659,low
+log_amount,numeric,0.0,0.0,0.0,0.002437151281035385,low
+amount_to_sender_past_mean_ratio,numeric,99.86213684552953,99.72731616857297,-0.13482067695657074,0.0009411821837618385,low
+amount_to_sender_past_mean_ratio_is_missing,categorical,0.0,0.0,0.0,0.0009213677720738552,low
+destination_is_merchant,categorical,0.0,0.0,0.0,0.000811780542181283,low
+sender_txn_count_prev_24_steps,numeric,0.0,0.0,0.0,1.3784950869522231e-11,low
+sender_amount_sum_prev_24_steps,numeric,0.0,0.0,0.0,1.3784950869522231e-11,low
+is_first_time_destination_for_sender,categorical,0.0,0.0,0.0,0.0,low

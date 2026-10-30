@@ -1,0 +1,3 @@
+policy,capacity,alerts,true_positives,false_positives,false_negatives,precision_pct,recall_pct,fraud_value_caught,dollar_weighted_recall_pct
+TRANSFER/CASH_OUT by amount,3104,3104,397,2707,1155,12.789948453608247,25.579896907216494,1567743893.0,77.12690837410689
+A0 score x amount,3104,3104,756,2348,796,24.355670103092784,48.71134020618557,1768972053.27,87.02655202683097

@@ -1,0 +1,101 @@
+{
+  "model": "models\\lightgbm_a0_tuned_best.joblib",
+  "validation_steps": [
+    446,
+    594
+  ],
+  "training_label_cutoff_step": 421,
+  "alerts_per_24_steps": 500,
+  "best_rule_value_from_sql": 1567743893.0,
+  "measured_rule_value": 1567743893.0,
+  "required_value_for_5pct_uplift": 1646131087.65,
+  "results": [
+    {
+      "policy": "Best rule: TRANSFER/CASH_OUT by amount",
+      "available_alert_capacity": 3104,
+      "alerts_used": 3104,
+      "true_positives": 397,
+      "false_positives": 2707,
+      "false_negatives": 1155,
+      "precision_pct": 12.789948453608247,
+      "recall_pct": 25.579896907216494,
+      "false_positive_rate_pct": 1.1948744432820866,
+      "fraud_value_caught": 1567743893.0,
+      "total_fraud_value": 2032680845.1799998,
+      "dollar_weighted_recall_pct": 77.12690837410689,
+      "value_uplift_vs_rule_pct": 0.0,
+      "meets_5pct_value_hurdle": false
+    },
+    {
+      "policy": "A0 fraud score: all transaction types",
+      "available_alert_capacity": 3104,
+      "alerts_used": 3104,
+      "true_positives": 824,
+      "false_positives": 2280,
+      "false_negatives": 728,
+      "precision_pct": 26.54639175257732,
+      "recall_pct": 53.09278350515464,
+      "false_positive_rate_pct": 1.0063959108545095,
+      "fraud_value_caught": 1484776437.54,
+      "total_fraud_value": 2032680845.1799998,
+      "dollar_weighted_recall_pct": 73.04523191925483,
+      "value_uplift_vs_rule_pct": -5.292156188931818,
+      "meets_5pct_value_hurdle": false
+    },
+    {
+      "policy": "A0 fraud score x amount: all transaction types",
+      "available_alert_capacity": 3104,
+      "alerts_used": 3104,
+      "true_positives": 756,
+      "false_positives": 2348,
+      "false_negatives": 796,
+      "precision_pct": 24.355670103092784,
+      "recall_pct": 48.71134020618557,
+      "false_positive_rate_pct": 1.03641122749403,
+      "fraud_value_caught": 1768972053.27,
+      "total_fraud_value": 2032680845.1799998,
+      "dollar_weighted_recall_pct": 87.02655202683097,
+      "value_uplift_vs_rule_pct": 12.83552506046981,
+      "meets_5pct_value_hurdle": true
+    },
+    {
+      "policy": "A0 fraud score: TRANSFER/CASH_OUT only",
+      "available_alert_capacity": 3104,
+      "alerts_used": 3104,
+      "true_positives": 824,
+      "false_positives": 2280,
+      "false_negatives": 728,
+      "precision_pct": 26.54639175257732,
+      "recall_pct": 53.09278350515464,
+      "false_positive_rate_pct": 1.0063959108545095,
+      "fraud_value_caught": 1484776437.54,
+      "total_fraud_value": 2032680845.1799998,
+      "dollar_weighted_recall_pct": 73.04523191925483,
+      "value_uplift_vs_rule_pct": -5.292156188931818,
+      "meets_5pct_value_hurdle": false
+    },
+    {
+      "policy": "A0 fraud score x amount: TRANSFER/CASH_OUT only",
+      "available_alert_capacity": 3104,
+      "alerts_used": 3104,
+      "true_positives": 756,
+      "false_positives": 2348,
+      "false_negatives": 796,
+      "precision_pct": 24.355670103092784,
+      "recall_pct": 48.71134020618557,
+      "false_positive_rate_pct": 1.03641122749403,
+      "fraud_value_caught": 1768972053.27,
+      "total_fraud_value": 2032680845.1799998,
+      "dollar_weighted_recall_pct": 87.02655202683097,
+      "value_uplift_vs_rule_pct": 12.83552506046981,
+      "meets_5pct_value_hurdle": true
+    }
+  ],
+  "notes": [
+    "Only approved A0 features are used for model scoring.",
+    "The locked test period is not scored.",
+    "Fraud score multiplied by amount is a ranking heuristic.",
+    "The heuristic is not a calibrated expected-loss estimate.",
+    "Validation results must not be presented as final test performance."
+  ]
+}

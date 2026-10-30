@@ -1,0 +1,12 @@
+feature,importance_gain
+log_amount,86428.65856683254
+type,77566.91288204491
+hour_of_day,65232.752854945604
+destination_txn_count_prev_24_steps,33533.85322371917
+destination_amount_sum_prev_24_steps,11229.843283951283
+destination_is_merchant,10126.200134634972
+amount_to_sender_past_mean_ratio,124.03388773574261
+amount_to_sender_past_mean_ratio_is_missing,18.843362234067172
+sender_amount_sum_prev_24_steps,9.887250285595655
+sender_txn_count_prev_24_steps,2.408931702375412
+is_first_time_destination_for_sender,0.0

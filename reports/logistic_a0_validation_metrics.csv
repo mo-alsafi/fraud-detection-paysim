@@ -1,0 +1,2 @@
+average_precision,alert_budget_per_full_24_steps,alert_count,true_positives,false_positives,false_negatives,precision_pct,recall_pct,false_positive_rate_pct,fraudulent_transaction_value_caught,total_fraudulent_transaction_value,dollar_weighted_recall_pct
+0.1260561574908133,3104,3104,618,2486,934,19.90979381443299,39.81958762886598,1.0973246642036452,1044107715.23,2032680845.1799998,51.36604291351706

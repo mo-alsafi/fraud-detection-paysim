@@ -1,0 +1,70 @@
+{
+  "checked_at_utc": "2026-10-24T21:37:44.746429Z",
+  "dataset_path": "data/processed/paysim.parquet",
+  "passed": true,
+  "expected_row_count": 6362620,
+  "manifest_row_count": 6362620,
+  "observed_summary": {
+    "row_count": 6362620,
+    "rows_with_nulls": 0,
+    "rows_with_invalid_labels": 0,
+    "min_step": 1,
+    "max_step": 743,
+    "distinct_steps": 743,
+    "distinct_type_count": 5
+  },
+  "observed_transaction_types": [
+    "CASH_IN",
+    "CASH_OUT",
+    "DEBIT",
+    "PAYMENT",
+    "TRANSFER"
+  ],
+  "observed_schema": [
+    {
+      "column": "step",
+      "type": "INTEGER"
+    },
+    {
+      "column": "type",
+      "type": "VARCHAR"
+    },
+    {
+      "column": "amount",
+      "type": "DOUBLE"
+    },
+    {
+      "column": "nameOrig",
+      "type": "VARCHAR"
+    },
+    {
+      "column": "oldbalanceOrg",
+      "type": "DOUBLE"
+    },
+    {
+      "column": "newbalanceOrig",
+      "type": "DOUBLE"
+    },
+    {
+      "column": "nameDest",
+      "type": "VARCHAR"
+    },
+    {
+      "column": "oldbalanceDest",
+      "type": "DOUBLE"
+    },
+    {
+      "column": "newbalanceDest",
+      "type": "DOUBLE"
+    },
+    {
+      "column": "isFraud",
+      "type": "UTINYINT"
+    },
+    {
+      "column": "isFlaggedFraud",
+      "type": "UTINYINT"
+    }
+  ],
+  "validation_errors": []
+}

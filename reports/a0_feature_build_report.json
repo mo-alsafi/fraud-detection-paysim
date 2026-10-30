@@ -1,0 +1,38 @@
+{
+  "built_at_utc": "2026-10-27T19:53:53.963049Z",
+  "feature_set": "A0",
+  "purpose": "primary_deployable_candidate",
+  "input_path": "data/processed/paysim.parquet",
+  "output_path": "data/processed/paysim_a0_features.parquet",
+  "row_count": 6362620,
+  "distinct_transaction_ids": 6362620,
+  "feature_columns": [
+    "hour_of_day",
+    "type",
+    "log_amount",
+    "destination_is_merchant",
+    "sender_txn_count_prev_24_steps",
+    "sender_amount_sum_prev_24_steps",
+    "destination_txn_count_prev_24_steps",
+    "destination_amount_sum_prev_24_steps",
+    "is_first_time_destination_for_sender",
+    "amount_to_sender_past_mean_ratio"
+  ],
+  "metadata_columns": [
+    "transaction_id",
+    "step",
+    "isFraud",
+    "amount"
+  ],
+  "undefined_past_mean_ratios": 6353354,
+  "history_window": "[step - 24, step - 1]",
+  "same_step_history_allowed": false,
+  "transaction_id_method": "row_number over insertion-preserved source Parquet order",
+  "notes": [
+    "Account history counts events where the account appears as origin or destination.",
+    "The past mean amount uses earlier outgoing transactions only.",
+    "Undefined past-mean ratios are intentionally NULL.",
+    "The target label and metadata columns must not be passed to the model as features."
+  ],
+  "output_size_bytes": 125841239
+}

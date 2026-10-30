@@ -1,0 +1,276 @@
+{
+  "model": "models\\lightgbm_a0_tuned_best.joblib",
+  "feature_set": "A0 only",
+  "training_steps": [
+    1,
+    421
+  ],
+  "validation_steps": [
+    446,
+    594
+  ],
+  "excluded_steps": [
+    422,
+    445
+  ],
+  "test_period_loaded": false,
+  "training_rows": 5994350,
+  "training_fraud_cases": 4755,
+  "training_fraud_rate_pct": 0.07932469742340705,
+  "validation_rows": 228103,
+  "validation_fraud_cases": 1552,
+  "validation_fraud_rate_pct": 0.6803943832391507,
+  "fraud_rate_ratio_validation_to_training": 8.577333483006527,
+  "psi_guidelines": {
+    "below_0_10": "low drift",
+    "0_10_to_below_0_25": "moderate drift",
+    "0_25_or_higher": "high drift",
+    "note": "PSI thresholds are rough monitoring guidelines, not universal statistical significance boundaries."
+  },
+  "high_drift_features": [
+    "destination_txn_count_prev_24_steps",
+    "destination_amount_sum_prev_24_steps",
+    "hour_of_day"
+  ],
+  "moderate_drift_features": [],
+  "feature_psi": [
+    {
+      "feature": "destination_txn_count_prev_24_steps",
+      "feature_type": "numeric",
+      "train_missing_pct": 0.0,
+      "validation_missing_pct": 0.0,
+      "missing_rate_change_percentage_points": 0.0,
+      "psi": 2.0925276099788666,
+      "psi_guideline": "high"
+    },
+    {
+      "feature": "destination_amount_sum_prev_24_steps",
+      "feature_type": "numeric",
+      "train_missing_pct": 0.0,
+      "validation_missing_pct": 0.0,
+      "missing_rate_change_percentage_points": 0.0,
+      "psi": 1.0435912853967666,
+      "psi_guideline": "high"
+    },
+    {
+      "feature": "hour_of_day",
+      "feature_type": "categorical",
+      "train_missing_pct": 0.0,
+      "validation_missing_pct": 0.0,
+      "missing_rate_change_percentage_points": 0.0,
+      "psi": 0.33775247620665777,
+      "psi_guideline": "high"
+    },
+    {
+      "feature": "type",
+      "feature_type": "categorical",
+      "train_missing_pct": 0.0,
+      "validation_missing_pct": 0.0,
+      "missing_rate_change_percentage_points": 0.0,
+      "psi": 0.005294138675090659,
+      "psi_guideline": "low"
+    },
+    {
+      "feature": "log_amount",
+      "feature_type": "numeric",
+      "train_missing_pct": 0.0,
+      "validation_missing_pct": 0.0,
+      "missing_rate_change_percentage_points": 0.0,
+      "psi": 0.002437151281035385,
+      "psi_guideline": "low"
+    },
+    {
+      "feature": "amount_to_sender_past_mean_ratio",
+      "feature_type": "numeric",
+      "train_missing_pct": 99.86213684552953,
+      "validation_missing_pct": 99.72731616857297,
+      "missing_rate_change_percentage_points": -0.13482067695657074,
+      "psi": 0.0009411821837618385,
+      "psi_guideline": "low"
+    },
+    {
+      "feature": "amount_to_sender_past_mean_ratio_is_missing",
+      "feature_type": "categorical",
+      "train_missing_pct": 0.0,
+      "validation_missing_pct": 0.0,
+      "missing_rate_change_percentage_points": 0.0,
+      "psi": 0.0009213677720738552,
+      "psi_guideline": "low"
+    },
+    {
+      "feature": "destination_is_merchant",
+      "feature_type": "categorical",
+      "train_missing_pct": 0.0,
+      "validation_missing_pct": 0.0,
+      "missing_rate_change_percentage_points": 0.0,
+      "psi": 0.000811780542181283,
+      "psi_guideline": "low"
+    },
+    {
+      "feature": "sender_txn_count_prev_24_steps",
+      "feature_type": "numeric",
+      "train_missing_pct": 0.0,
+      "validation_missing_pct": 0.0,
+      "missing_rate_change_percentage_points": 0.0,
+      "psi": 1.3784950869522231e-11,
+      "psi_guideline": "low"
+    },
+    {
+      "feature": "sender_amount_sum_prev_24_steps",
+      "feature_type": "numeric",
+      "train_missing_pct": 0.0,
+      "validation_missing_pct": 0.0,
+      "missing_rate_change_percentage_points": 0.0,
+      "psi": 1.3784950869522231e-11,
+      "psi_guideline": "low"
+    },
+    {
+      "feature": "is_first_time_destination_for_sender",
+      "feature_type": "categorical",
+      "train_missing_pct": 0.0,
+      "validation_missing_pct": 0.0,
+      "missing_rate_change_percentage_points": 0.0,
+      "psi": 0.0,
+      "psi_guideline": "low"
+    }
+  ],
+  "daily_validation_metrics": [
+    {
+      "simulation_day": 18,
+      "first_step": 446,
+      "last_step": 456,
+      "covered_steps": 11,
+      "transactions": 8779,
+      "fraud_cases": 106,
+      "fraud_rate_pct": 1.2074268139879258,
+      "alert_capacity": 229,
+      "alerts_used": 229,
+      "true_positives": 47,
+      "false_positives": 182,
+      "precision_pct": 20.524017467248907,
+      "recall_pct": 44.339622641509436,
+      "fraud_value_total": 159864377.7,
+      "fraud_value_caught": 148827433.07000002,
+      "dollar_weighted_recall_pct": 93.09605755278903
+    },
+    {
+      "simulation_day": 19,
+      "first_step": 457,
+      "last_step": 480,
+      "covered_steps": 24,
+      "transactions": 19727,
+      "fraud_cases": 236,
+      "fraud_rate_pct": 1.196329903178385,
+      "alert_capacity": 500,
+      "alerts_used": 500,
+      "true_positives": 137,
+      "false_positives": 363,
+      "precision_pct": 27.4,
+      "recall_pct": 58.05084745762712,
+      "fraud_value_total": 276683328.7,
+      "fraud_value_caught": 249095847.99,
+      "dollar_weighted_recall_pct": 90.02922191242237
+    },
+    {
+      "simulation_day": 20,
+      "first_step": 481,
+      "last_step": 504,
+      "covered_steps": 24,
+      "transactions": 24593,
+      "fraud_cases": 272,
+      "fraud_rate_pct": 1.1060057740007319,
+      "alert_capacity": 500,
+      "alerts_used": 500,
+      "true_positives": 120,
+      "false_positives": 380,
+      "precision_pct": 24.0,
+      "recall_pct": 44.11764705882353,
+      "fraud_value_total": 389222618.62,
+      "fraud_value_caught": 327255588.34000003,
+      "dollar_weighted_recall_pct": 84.07928334182996
+    },
+    {
+      "simulation_day": 21,
+      "first_step": 505,
+      "last_step": 528,
+      "covered_steps": 24,
+      "transactions": 53437,
+      "fraud_cases": 256,
+      "fraud_rate_pct": 0.4790688100005614,
+      "alert_capacity": 500,
+      "alerts_used": 500,
+      "true_positives": 103,
+      "false_positives": 397,
+      "precision_pct": 20.6,
+      "recall_pct": 40.234375,
+      "fraud_value_total": 408818642.14,
+      "fraud_value_caught": 342645013.25999993,
+      "dollar_weighted_recall_pct": 83.81345123265223
+    },
+    {
+      "simulation_day": 22,
+      "first_step": 529,
+      "last_step": 552,
+      "covered_steps": 24,
+      "transactions": 51012,
+      "fraud_cases": 216,
+      "fraud_rate_pct": 0.4234297812279464,
+      "alert_capacity": 500,
+      "alerts_used": 500,
+      "true_positives": 94,
+      "false_positives": 406,
+      "precision_pct": 18.8,
+      "recall_pct": 43.51851851851852,
+      "fraud_value_total": 219389372.0,
+      "fraud_value_caught": 183648196.64999995,
+      "dollar_weighted_recall_pct": 83.70879362834403
+    },
+    {
+      "simulation_day": 23,
+      "first_step": 553,
+      "last_step": 576,
+      "covered_steps": 24,
+      "transactions": 32709,
+      "fraud_cases": 280,
+      "fraud_rate_pct": 0.8560335075972973,
+      "alert_capacity": 500,
+      "alerts_used": 500,
+      "true_positives": 143,
+      "false_positives": 357,
+      "precision_pct": 28.6,
+      "recall_pct": 51.07142857142857,
+      "fraud_value_total": 334491241.74,
+      "fraud_value_caught": 299623481.25,
+      "dollar_weighted_recall_pct": 89.57588237329612
+    },
+    {
+      "simulation_day": 24,
+      "first_step": 577,
+      "last_step": 594,
+      "covered_steps": 18,
+      "transactions": 37846,
+      "fraud_cases": 186,
+      "fraud_rate_pct": 0.49146541246102626,
+      "alert_capacity": 375,
+      "alerts_used": 375,
+      "true_positives": 112,
+      "false_positives": 263,
+      "precision_pct": 29.866666666666667,
+      "recall_pct": 60.215053763440864,
+      "fraud_value_total": 244211264.27999997,
+      "fraud_value_caught": 217876492.70999998,
+      "dollar_weighted_recall_pct": 89.21639767615062
+    }
+  ],
+  "outputs": {
+    "feature_psi_csv": "reports\\a0_feature_drift_psi.csv",
+    "daily_stability_csv": "reports\\a0_daily_validation_stability.csv"
+  },
+  "limitations": [
+    "Feature PSI is descriptive and depends on binning.",
+    "Validation was used for model and policy selection.",
+    "Daily metrics can be volatile when fraud counts are small.",
+    "PSI does not establish the cause of drift.",
+    "The locked test period was not loaded or rescored."
+  ]
+}

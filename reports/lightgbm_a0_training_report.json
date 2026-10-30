@@ -1,0 +1,58 @@
+{
+  "feature_set": "A0 plus ratio missingness indicator",
+  "input": "data\\processed\\paysim_a0_features.parquet",
+  "nominal_training_steps": [
+    1,
+    445
+  ],
+  "effective_training_end_step": 421,
+  "label_delay_steps": 24,
+  "purged_steps": [
+    422,
+    445
+  ],
+  "validation_steps": [
+    446,
+    594
+  ],
+  "alerts_per_24_steps": 500,
+  "undersampling_negatives_per_positive": 20,
+  "categorical_features": [
+    "hour_of_day",
+    "type"
+  ],
+  "features": [
+    "hour_of_day",
+    "type",
+    "log_amount",
+    "destination_is_merchant",
+    "sender_txn_count_prev_24_steps",
+    "sender_amount_sum_prev_24_steps",
+    "destination_txn_count_prev_24_steps",
+    "destination_amount_sum_prev_24_steps",
+    "is_first_time_destination_for_sender",
+    "amount_to_sender_past_mean_ratio",
+    "amount_to_sender_past_mean_ratio_is_missing"
+  ],
+  "lightgbm_version": "4.7.0",
+  "training_summary": [
+    {
+      "training_rows": 5994350,
+      "training_fraud_cases": 4755,
+      "training_legitimate_cases": 5989595,
+      "training_fraud_rate_pct": 0.07932469742340705,
+      "effective_training_end_step": 421
+    }
+  ],
+  "outputs": {
+    "metrics_csv": "reports\\lightgbm_a0_validation_metrics.csv",
+    "metrics_json": "reports\\lightgbm_a0_validation_metrics.json",
+    "feature_importance_csv": "reports\\lightgbm_a0_feature_importance.csv"
+  },
+  "notes": [
+    "Validation is used for comparison, not for fitting preprocessing.",
+    "Locked test steps are not used by this script.",
+    "Undersampling changes the training class prevalence; scores may not be calibrated.",
+    "A0 excludes post-transaction balance features."
+  ]
+}

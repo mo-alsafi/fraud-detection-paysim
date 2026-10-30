@@ -1,0 +1,3 @@
+policy,available_alert_capacity,alerts_used,true_positives,false_positives,false_negatives,precision_pct,recall_pct,false_positive_rate_pct,fraud_value_caught,total_fraud_value,dollar_weighted_recall_pct,manual_review_cost_proxy,net_benefit_proxy
+TRANSFER/CASH_OUT by amount,3104,2897,818,2079,836,28.23610631687953,49.4558645707376,1.705132621426111,2509971879.56,2722434569.3599997,92.19585689253329,289700.0,2509682179.56
+A0 fraud score x amount,3104,2897,1043,1854,611,36.00276147739041,63.059250302297464,1.5205944589341076,2579161845.99,2722434569.3599997,94.7373308808784,289700.0,2578872145.99

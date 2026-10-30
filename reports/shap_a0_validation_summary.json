@@ -1,0 +1,33 @@
+{
+  "model": "models\\lightgbm_a0_tuned_best.joblib",
+  "feature_set": "A0 only",
+  "validation_steps": [
+    446,
+    594
+  ],
+  "validation_rows": 228103,
+  "validation_fraud_cases": 1552,
+  "validation_legitimate_cases": 226551,
+  "validation_fraud_rate_pct": 0.6803943832391507,
+  "explanation_sample_rows": 3104,
+  "explanation_sample_fraud_cases": 1552,
+  "explanation_sample_legitimate_cases": 1552,
+  "sample_method": "All validation fraud cases plus an equally sized random sample of validation legitimate cases.",
+  "shap_version": "0.54.1",
+  "lightgbm_version": "4.7.0",
+  "shap_output": "raw model output (fraud log-odds)",
+  "importance_method": "Class-specific mean absolute SHAP, weighted by actual validation class prevalence for the overall ranking.",
+  "outputs": {
+    "importance_csv": "reports\\shap_a0_validation_importance.csv",
+    "beeswarm_plot": "reports\\shap_a0_validation_beeswarm.png",
+    "global_importance_plot": "reports\\shap_a0_validation_global_importance.png"
+  },
+  "limitations": [
+    "SHAP explains model behavior; it does not establish causality.",
+    "The validation period was used during model selection.",
+    "The balanced explanation sample is not prevalence representative.",
+    "Overall importance is weighted using actual validation prevalence.",
+    "The locked test period was not loaded or scored.",
+    "These explanations do not establish performance on real payment data."
+  ]
+}

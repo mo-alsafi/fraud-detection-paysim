@@ -1,0 +1,37 @@
+{
+  "model": "models\\lightgbm_a0_tuned_best.joblib",
+  "feature_set": "A0 only",
+  "validation_steps": [
+    446,
+    594
+  ],
+  "validation_rows": 228103,
+  "alert_budget_per_24_steps": 500,
+  "available_alert_capacity": 3104,
+  "alerts_used": 3104,
+  "true_positives": 756,
+  "false_positives": 2348,
+  "false_negatives": 796,
+  "true_negatives": 224203,
+  "precision_pct": 24.355670103092784,
+  "recall_pct": 48.71134020618557,
+  "error_definition": {
+    "FP": "Legitimate transaction selected for review",
+    "FN": "Fraudulent transaction not selected"
+  },
+  "notes": [
+    "Uses validation only, not the locked test period.",
+    "False-negative near-misses are ranked by distance below their own simulation-day alert cutoff.",
+    "False-positive examples are anonymized; account names are not included in the A0 feature table.",
+    "The validation period was used in model/policy selection, so error patterns are exploratory."
+  ],
+  "outputs": {
+    "confusion": "reports\\a0_error_confusion.csv",
+    "by_type": "reports\\a0_error_by_type.csv",
+    "by_amount": "reports\\a0_error_by_amount_band.csv",
+    "by_hour": "reports\\a0_error_by_hour.csv",
+    "false_positives": "reports\\a0_false_positive_examples.csv",
+    "false_negatives": "reports\\a0_false_negative_nearmisses.csv",
+    "report": "reports\\a0_error_analysis_report.json"
+  }
+}

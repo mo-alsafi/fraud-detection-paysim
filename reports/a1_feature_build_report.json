@@ -1,0 +1,45 @@
+{
+  "built_at_utc": "2026-10-29T18:22:06.221474+00:00",
+  "feature_set": "A1",
+  "input_raw": "data\\processed\\paysim.parquet",
+  "input_a0": "data\\processed\\paysim_a0_features.parquet",
+  "output": "data\\processed\\paysim_a1_features.parquet",
+  "row_count": 6362620,
+  "distinct_transaction_ids": 6362620,
+  "min_step": 1,
+  "max_step": 743,
+  "raw_a0_alignment": {
+    "missing_raw_matches": 0,
+    "mismatched_transactions": 0
+  },
+  "feature_columns": [
+    "hour_of_day",
+    "type",
+    "log_amount",
+    "destination_is_merchant",
+    "sender_txn_count_prev_24_steps",
+    "sender_amount_sum_prev_24_steps",
+    "destination_txn_count_prev_24_steps",
+    "destination_amount_sum_prev_24_steps",
+    "is_first_time_destination_for_sender",
+    "amount_to_sender_past_mean_ratio",
+    "amount_to_sender_past_mean_ratio_is_missing",
+    "oldbalanceOrg",
+    "oldbalanceDest",
+    "drain_ratio",
+    "amount_to_oldbalanceDest_ratio"
+  ],
+  "undefined_drain_ratio": 2102449,
+  "undefined_destination_ratio": 2704388,
+  "missing_sender_balance": 0,
+  "missing_destination_balance": 0,
+  "post_transaction_balance_features_included": false,
+  "output_size_bytes": 229089100,
+  "notes": [
+    "A1 contains A0 plus pre-transaction balance features.",
+    "Ratios are NULL when their denominator is not positive.",
+    "Post-transaction balances are excluded.",
+    "Raw transaction IDs and account names are not model features.",
+    "Alignment validation passed before the join was written."
+  ]
+}
