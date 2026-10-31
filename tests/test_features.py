@@ -233,5 +233,5 @@ def test_invalid_input_amount_is_rejected(tmp_path):
 
     write_parquet(frame, source)
 
-    with pytest.raises(ValueError, match="invalid amounts"):
+    with pytest.raises(ValueError, match="negative or non-finite amounts"):
         build_a0_features(source, output)
