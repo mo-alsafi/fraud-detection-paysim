@@ -1,6 +1,6 @@
 {
   "manifest_version": 1,
-  "generated_at_utc": "2026-10-31T01:45:59.118563+00:00",
+  "generated_at_utc": "2026-11-03T21:32:58.344496+00:00",
   "project": {
     "name": "PaySim Fraud Detection",
     "dataset": "PaySim synthetic mobile-money transactions",
@@ -165,9 +165,9 @@
     }
   },
   "git": {
-    "commit_sha": "219cd16510dce3d9764c6a73c6288be4b2bba05d",
+    "commit_sha": "2846be805c9c977e47451ea7ffb15468f6a5d711",
     "branch": "main",
-    "working_tree_dirty": true
+    "working_tree_dirty": false
   },
   "source_artifacts": {
     "feature_contract": {
