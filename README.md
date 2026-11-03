@@ -48,6 +48,8 @@ The project follows a chronological, phase-based workflow:
 | 6 | Model selection and locked test evaluation | Complete |
 | 7 | Explainability, error analysis, and drift diagnostics | Complete |
 | 8 | Inference, testing, and reproducibility packaging | Complete |
+| 9 | Tableau dashboards and operational reporting | Complete |
+| 10 | Case study and interview preparation | Complete |
 
 ## 4. Key modeling decisions
 
@@ -350,3 +352,17 @@ Important limitations include:
 8. No evidence yet establishes generalization to real payment data.
 
 **Recommendation:** Keep the rule as the selected baseline and retain the A0 LightGBM model as a research challenger. Do not approve production deployment based on this synthetic-data evaluation alone.
+
+
+## Case study and interview preparation
+
+- `reports/case_study.md` — end-to-end business case, methodology, results, and recommendation.
+- `reports/interview_prep.md` — technical and business interview questions and answers.
+
+## Tableau dashboards
+
+The Tableau workbook is saved locally as:
+
+`PaySim_Fraud_Detection_Dashboard.twbx`
+
+It contains the Executive Decision, Operational Performance, and Model Diagnostics views. The packaged workbook is distributed separately from this repository.
