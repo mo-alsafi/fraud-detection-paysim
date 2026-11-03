@@ -47,7 +47,7 @@ The project follows a chronological, phase-based workflow:
 | 5 | LightGBM training and model comparison | Complete |
 | 6 | Model selection and locked test evaluation | Complete |
 | 7 | Explainability, error analysis, and drift diagnostics | Complete |
-| 8 | Inference, testing, and reproducibility packaging | In progress |
+| 8 | Inference, testing, and reproducibility packaging | Complete |
 
 ## 4. Key modeling decisions
 
